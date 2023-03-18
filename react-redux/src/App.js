@@ -1,12 +1,17 @@
-import './App.css';
+import React from 'react';
+import {HashRouter as Router, Route, Routes} from "react-router-dom"
+import Detail from './routes/Detail';
+import Home from './routes/Home';
 
 function App() {
-    //  todo
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" exact Component={Home}></Route>
+        <Route path="/:id" exact Component={Detail}></Route>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
